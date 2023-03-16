@@ -1,0 +1,232 @@
+/*importando fontes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+
+/*abaixo, fica a sessão com a configuraçao base*/
+
+body{
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/*abaixo, fica a sessão com o cabeçalho*/
+
+header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.LogoIMG{
+    padding-left: 180px;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 10px;
+    padding-right: 180px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: static;
+}
+
+.ItemLista{
+    padding: 5px 10px;
+}
+
+.ItemLista a:hover{
+    color: rgba(228, 117, 13, 0.987);
+}
+
+/*abaixo, fica a sessão com a parte principal*/
+
+.MainNews{
+    line-height: 1.8;
+
+    width: 82%;
+    height: 70vh;
+    margin: 0.4% 8%;
+    gap: 20px 20px;
+
+    display: grid;
+    grid-template-columns: 40% 40% 20% ;
+    grid-auto-rows: fit-content;
+}
+
+.MainIMG{
+    height: fit-content;
+    width: 95%;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
+
+#MainHeader{
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 120%;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#MainParagrafo{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#LeiaNoticia{
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 25px;
+
+    color: white;
+    background-color: salmon;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: larger;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#LeiaNoticia:hover{   
+    background-color: black;
+}
+
+/*abaixo, fica a sessão com a parte lateral*/
+
+.BesideMain{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: -5px;
+    margin-right: 20px;
+    padding: 10px;
+
+    background-color: rgb(1, 1, 54);
+    color: white;
+}
+
+.BesideHeader{
+    height: fit-content;
+    width: fit-content;
+    
+    color: rgb(220, 164, 74);
+    font-weight: bolder;  
+    font-size: xx-large;
+}
+
+.BesideMain h2{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.BesideMain h2:hover{
+    color: rgb(220, 164, 74);
+}
+
+.sideNews{
+    margin-top: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(77, 77, 95, 0.613);
+
+}
+
+.LastSideNews{
+    margin-top: 50px;
+}
+
+/*abaixo, fica a sessão com as noticias*/
+
+.bellow{
+    padding: 10px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.BellowNews{
+    display: flex;
+    padding: 2px;
+    max-width: fit-content;
+}
+
+.bellow h1{
+    color: rgb(187, 186, 186);
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.bellow h2{
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.bellow p{
+    padding-top: 20px;
+}
+
+.BellowNews h2:hover{
+    color: rgb(220, 164, 74);
+}
+
+.BellowIMG{
+    padding-right: 40px;
+    height: 90%;
+    width: 40%;
+}
+
+.BellowText{
+    margin-left: auto;
+    flex-direction: column;
+}
+
+.Btexto{
+    line-height: 1.8;
+}
+
+/*abaixo, fica a sessão com o rodape*/
+
+footer {
+    margin-top: auto;
+    padding: 5px;
+  }
+
+.attribution{
+    font-size: 19px;
+    text-align: center;
+}
+
+.attribution a{
+    position: bottom;
+    padding: 10px;
+    text-decoration: none;
+     color: hsl(228, 45%, 44%);
+}
