@@ -2,234 +2,446 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
+/*versao mobile*/
 
-/*abaixo, fica a sessão com a configuraçao base*/
+@media (max-width: 939px) {
+    /*abaixo, fica a sessão com a configuraçao base*/
 
-body{
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-a{
-    color: black;
-    text-decoration: none;
-}
-
-/*abaixo, fica a sessão com o cabeçalho*/
-
-header{
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.LogoIMG{
-    padding-left: 100px;
-}
-
-.menu{
-    list-style-type: none;
-    padding: 10px;
-    padding-right: 100px;
-
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    position: static;
-}
-
-.ItemLista{
-    padding: 5px 10px;
-}
-
-.ItemLista a:hover{
-    color: rgba(228, 117, 13, 0.987);
-}
-
-/*abaixo, fica a sessão com a parte principal*/
-
-.MainNews{
-    line-height: 1.8;
-
-    width: 82%;
-    height: 70vh;
-    margin: 0.4% 8%;
-    gap: 20px 20px;
-
-    display: grid;
-    grid-template-columns: 40% 40% 20% ;
-    grid-auto-rows: fit-content;
-}
-
-.MainIMG{
-    height: fit-content;
-    width: 95%;
-
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-}
-
-#MainHeader{
-    font-size: 50px;
-    font-weight: 800;
-    text-align: center;
-    line-height: 120%;
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-
-#MainParagrafo{
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-#LeiaNoticia{
-    height: fit-content;
-    width: fit-content;
-    padding: 10px 25px;
-
-    color: white;
-    background-color: hsl(5, 85%, 63%);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: larger;
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-#LeiaNoticia:hover{   
-    background-color: black;
-}
-
-/*abaixo, fica a sessão com a parte lateral*/
-
-.BesideMain{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 4;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: -5px;
-    margin-right: 20px;
-    padding: 10px;
-
-    background-color: hsl(240, 100%, 5%);
-    color: white;
-}
-
-.BesideHeader{
-    height: fit-content;
-    width: fit-content;
+    #DeskMainIMG{
+        display: none;
+    }
     
-    color: hsl(35, 77%, 62%);
-    font-weight: 800;  
-    font-size: xx-large;
+    body{
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    /*fazer um sidebar depois*/
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .LogoIMG{
+        margin: 2% 4%;
+        height: 10%;
+        width: 10%;
+    }
+
+
+
+    /*abaixo, fica a sessão com a parte principal*/
+
+    .MainNews{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .MainNews img{
+        margin: 2% 4%;
+    }
+    
+    #MainHeader{
+        font-size: 50px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 100%;
+    }
+
+    #MainParagrafo{
+        color: hsl(225, 2%, 42%);
+        white-space: pre-line;
+        line-height: 100%;
+        padding: 5px 15px 15px;
+    }
+
+    #LeiaNoticia{
+        height: fit-content;
+        width: fit-content;
+        margin: 4% 4%;
+        padding: 13px 40px;
+    
+        color: white;
+        background-color: hsl(5, 85%, 63%);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: normal;
+        font-weight: 700;
+    }
+
+    /*abaixo, fica a sessão com a parte lateral*/
+    
+    .BesideMain{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 5% 4%;
+        padding: 10px;
+    
+        background-color: hsl(240, 100%, 5%);
+        color: white;
+    }
+    
+    .BesideHeader{
+        padding: 15px 5px 0px 15px ;
+
+        height: fit-content;
+        width: fit-content;
+        
+        color: hsl(35, 77%, 62%);
+        font-weight: 800;  
+        font-size: xx-large;
+    }
+    
+    .Stexto{
+        line-height: 1.8;
+    }
+
+    .BesideMain h2{
+        font-size: larger;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    
+    .BesideMain h2:hover{
+        color: hsl(35, 77%, 62%);
+    }
+    
+    .sideNews{
+        padding: 30px 0px;
+        border-bottom: 1px solid hsl(236, 13%, 42%);
+    
+    }
+    
+    .LastSideNews{
+        margin: 20px 0px;
+    }
+
+    /*abaixo, fica a sessão com as noticias*/
+    
+    .bellow{
+        padding: 40px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .BellowNews{
+        display: flex;
+        padding: 2px;
+        margin: 20px 0px;
+        max-width: fit-content;
+    }
+    
+    .bellow h1{
+        color: rgb(206, 206, 206);
+        font-weight: 800;
+        font-size: xx-large;
+    }
+    
+    .bellow h2{
+        font-size: large;
+        padding-top: 20px;
+        font-weight: 700;
+    }
+    
+    .bellow p{
+        padding-top: 20px;
+        color: hsl(225, 2%, 42%);
+    }
+    
+    .BellowNews h2:hover{
+        color: rgb(220, 164, 74);
+    }
+    
+    .BellowIMG{
+        padding-top: 10px;
+        padding-right: 20px;
+        height: 80%;
+        width: 30%;
+    }
+    
+    .BellowText{
+        margin-left: auto;
+        flex-direction: column;
+    }
+    
+    .Btexto{
+        line-height: 1.3;
+    }
+    
+    /*abaixo, fica a sessão com o rodape*/
+    
+    footer {
+        margin-top: auto;
+        padding: 5px;
+      }
+    
+    .attribution{
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .attribution a{
+        position: bottom;
+        padding: 10px;
+        text-decoration: none;
+         color: hsl(228, 45%, 44%);
+    }
+    
 }
 
-.BesideMain h2{
-    font-size: larger;
-    font-weight: 700;
+/*versao de desktop*/
+
+@media (min-width: 940px) {
+    
+    
+    /*abaixo, fica a sessão com a configuraçao base*/
+    #MobileMainIMG{
+        display: none;
+    }
+    
+    body{
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    /*abaixo, fica a sessão com o cabeçalho*/
+    
+    header{
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .LogoIMG{
+        padding-left: 100px;
+    }
+    
+    .menu{
+        list-style-type: none;
+        padding: 10px;
+        padding-right: 100px;
+    
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        position: static;
+    }
+    
+    .ItemLista{
+        padding: 5px 10px;
+    }
+    
+    .ItemLista a:hover{
+        color: rgba(228, 117, 13, 0.987);
+    }
+    
+    /*abaixo, fica a sessão com a parte principal*/
+    
+    .MainNews{
+        line-height: 1.8;
+    
+        width: 82%;
+        height: 80%;
+        margin: 0.4% 8%;
+        gap: -20px 20px;
+    
+        display: grid;
+        grid-template-columns: 40% 40% 20% ;
+        grid-auto-rows: fit-content;
+    }
+    
+    .MainNews img{
+        height: fit-content;
+        width: 95%;
+    
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    
+    }
+    
+    #MainHeader{
+        font-size: 50px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 120%;
+    
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    
+    #MainParagrafo{
+    
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    #LeiaNoticia{
+        height: fit-content;
+        width: fit-content;
+        padding: 10px 25px;
+    
+        color: white;
+        background-color: hsl(5, 85%, 63%);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: larger;
+    
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    
+    #LeiaNoticia:hover{   
+        background-color: black;
+    }
+    
+    /*abaixo, fica a sessão com a parte lateral*/
+    
+    .BesideMain{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: -5px;
+        margin-right: 20px;
+        padding: 10px;
+    
+        background-color: hsl(240, 100%, 5%);
+        color: white;
+    }
+    
+    .BesideHeader{
+        height: fit-content;
+        width: fit-content;
+        
+        color: hsl(35, 77%, 62%);
+        font-weight: 800;  
+        font-size: xx-large;
+    }
+    
+    .BesideMain h2{
+        font-size: larger;
+        font-weight: 700;
+    }
+    
+    .BesideMain h2:hover{
+        color: hsl(35, 77%, 62%);
+    }
+    
+    .sideNews{
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid hsl(236, 13%, 42%);
+    
+    }
+    
+    .LastSideNews{
+        margin: 20px 0px;
+    }
+    
+    /*abaixo, fica a sessão com as noticias*/
+    
+    .bellow{
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .BellowNews{
+        display: flex;
+        padding: 2px;
+        max-width: fit-content;
+    }
+    
+    .bellow h1{
+        color: rgb(187, 186, 186);
+        font-weight: 800;
+        font-size: xx-large;
+    }
+    
+    .bellow h2{
+        padding-top: 20px;
+        font-weight: 700;
+    }
+    
+    .bellow p{
+        padding-top: 20px;
+    }
+    
+    .BellowNews h2:hover{
+        color: rgb(220, 164, 74);
+    }
+    
+    .BellowIMG{
+        padding-right: 40px;
+        height: 90%;
+        width: 40%;
+    }
+    
+    .BellowText{
+        margin-left: auto;
+        flex-direction: column;
+    }
+    
+    .Btexto{
+        line-height: 1.8;
+    }
+    
+    /*abaixo, fica a sessão com o rodape*/
+    
+    footer {
+        margin-top: auto;
+        padding: 5px;
+      }
+    
+    .attribution{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .attribution a{
+        position: bottom;
+        padding: 10px;
+        text-decoration: none;
+         color: hsl(228, 45%, 44%);
+    }
 }
 
-.BesideMain h2:hover{
-    color: hsl(35, 77%, 62%);
-}
-
-.sideNews{
-    margin-top: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid hsl(236, 13%, 42%);
-
-}
-
-.LastSideNews{
-    margin-top: 50px;
-}
-
-/*abaixo, fica a sessão com as noticias*/
-
-.bellow{
-    padding: 10px;
-    padding-top: 70px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.BellowNews{
-    display: flex;
-    padding: 2px;
-    max-width: fit-content;
-}
-
-.bellow h1{
-    color: rgb(187, 186, 186);
-    font-weight: 800;
-    font-size: xx-large;
-}
-
-.bellow h2{
-    padding-top: 20px;
-    font-weight: 700;
-}
-
-.bellow p{
-    padding-top: 20px;
-}
-
-.BellowNews h2:hover{
-    color: rgb(220, 164, 74);
-}
-
-.BellowIMG{
-    padding-right: 40px;
-    height: 90%;
-    width: 40%;
-}
-
-.BellowText{
-    margin-left: auto;
-    flex-direction: column;
-}
-
-.Btexto{
-    line-height: 1.8;
-}
-
-/*abaixo, fica a sessão com o rodape*/
-
-footer {
-    margin-top: auto;
-    padding: 5px;
-  }
-
-.attribution{
-    font-size: 15px;
-    text-align: center;
-}
-
-.attribution a{
-    position: bottom;
-    padding: 10px;
-    text-decoration: none;
-     color: hsl(228, 45%, 44%);
-}
