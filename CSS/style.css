@@ -37,6 +37,43 @@
         width: 10%;
     }
 
+    .NavIcon{
+        margin: 2% 4%;
+        height: 10%;
+        width: 10%;
+    }
+
+    .SideNav{
+        height: 100%; 
+        width: 0; 
+        position: fixed;
+        right: 0;
+        background-color: white;
+        overflow-x: hidden;
+        padding-top: 60px; 
+        transition: 0.5s;
+    }
+
+    .SideNavOrganization{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .SideNavOrganization a{
+        padding: 9px;
+        transition: 0.3;
+        font-size: large;
+        text-decoration: none;
+    }
+
+    .SideNav .closeBtn{
+        margin: 2% 4%;
+        height: 10%;
+        width: 10%;
+    }
+
+    .NavMenu{display: none;}
 
 
     /*abaixo, fica a sessão com a parte principal*/
@@ -210,11 +247,20 @@
 
 @media (min-width: 940px) {
     
+    /*esconder coisas mobile*/
+    .SideNav{
+        display: none;
+    }
     
-    /*abaixo, fica a sessão com a configuraçao base*/
+    .NavIcon{
+        display: none;
+    }
+    
     #MobileMainIMG{
         display: none;
     }
+
+    /*abaixo, fica a sessão com a configuraçao base*/
     
     body{
         font-family: 'Inter', sans-serif;
@@ -253,7 +299,8 @@
         flex-direction: row;
         position: static;
     }
-    
+
+
     .ItemLista{
         padding: 5px 10px;
     }

@@ -14,14 +14,30 @@
 <body>
   <!--barra onde se encontra a logo e menu do site-->
   <header>
+    
     <img src="assets/images/logo.svg" alt="icone" class="LogoIMG">
-    <ul class="menu">
-      <li class="ItemLista"><a href="#">Home</a></li>
-      <li class="ItemLista"><a href="#">New</a></li>
-      <li class="ItemLista"><a href="#">Popular</a></li>
-      <li class="ItemLista"><a href="#">Trending</a></li>
-      <li class="ItemLista"><a href="#">Categories</a></li>
-    </ul>
+  
+    <span class="NavIcon" onclick="openNav()"><img src="assets\images\icon-menu.svg" alt="menu"></span>
+    <div class="NavMenu">
+      <ul class="menu">
+        <li class="ItemLista"><a href="#">Home</a></li>
+        <li class="ItemLista"><a href="#">New</a></li>
+        <li class="ItemLista"><a href="#">Popular</a></li>
+        <li class="ItemLista"><a href="#">Trending</a></li>
+        <li class="ItemLista"><a href="#">Categories</a></li>
+      </ul>
+    </div>
+    <div id="SideNavID" class="SideNav">
+      <a href="javascript:void(0)" class="CloseBtn" onclick="CloseNav()"><img src="assets\images\icon-menu-close.svg" alt="fechar"></a>
+      <div class="SideNavOrganization">
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#">Popular</a>
+        <a href="#">Trending</a>
+        <a href="#">Categories</a>
+      </div>
+    </div>
+
   </header>
 
   <main>
@@ -133,6 +149,18 @@
     Coded by <a href="https://github.com/M-P-Ven">M-P-Ven</a>.
   <footer>
 
-</body>
+  <script>
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+      document.getElementById("SideNavID").style.width = "70%";
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function CloseNav() {
+      document.getElementById("SideNavID").style.width = "0";
+    }
+  </script>
+
+ </body>
 
 </html>
